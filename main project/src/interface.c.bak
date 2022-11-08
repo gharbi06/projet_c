@@ -1536,6 +1536,9 @@ create_Gestion_utilisateurs (void)
   GtkWidget *image25;
   GtkWidget *comboboxentry3;
   GtkWidget *Ajouter_;
+  GtkWidget *fixed51;
+  GtkWidget *image81;
+  GtkWidget *label221;
   GtkWidget *fixed27;
   GtkWidget *entry25;
   GtkWidget *entry26;
@@ -1932,6 +1935,21 @@ create_Gestion_utilisateurs (void)
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 0), Ajouter_);
   gtk_widget_set_size_request (Ajouter_, 70, 40);
 
+  fixed51 = gtk_fixed_new ();
+  gtk_widget_show (fixed51);
+  gtk_container_add (GTK_CONTAINER (notebook5), fixed51);
+
+  image81 = create_pixmap (Gestion_utilisateurs, "314872982_490099776226899_2862837691475170518_n.png");
+  gtk_widget_show (image81);
+  gtk_fixed_put (GTK_FIXED (fixed51), image81, 0, 0);
+  gtk_widget_set_size_request (image81, 1168, 700);
+
+  label221 = gtk_label_new (_("<span foreground=\"salmon\" ><b>Ajouter</b></span>"));
+  gtk_widget_show (label221);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 1), label221);
+  gtk_widget_set_size_request (label221, 70, 40);
+  gtk_label_set_use_markup (GTK_LABEL (label221), TRUE);
+
   fixed27 = gtk_fixed_new ();
   gtk_widget_show (fixed27);
   gtk_container_add (GTK_CONTAINER (notebook5), fixed27);
@@ -2125,21 +2143,21 @@ create_Gestion_utilisateurs (void)
 
   Modifier = gtk_label_new (_("Modifier"));
   gtk_widget_show (Modifier);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 1), Modifier);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 2), Modifier);
   gtk_widget_set_size_request (Modifier, 70, 20);
 
   fixed50 = gtk_fixed_new ();
   gtk_widget_show (fixed50);
   gtk_container_add (GTK_CONTAINER (notebook5), fixed50);
 
-  image80 = create_pixmap (Gestion_utilisateurs, NULL);
+  image80 = create_pixmap (Gestion_utilisateurs, "314872982_490099776226899_2862837691475170518_n.png");
   gtk_widget_show (image80);
-  gtk_fixed_put (GTK_FIXED (fixed50), image80, 896, 168);
-  gtk_widget_set_size_request (image80, 21, 21);
+  gtk_fixed_put (GTK_FIXED (fixed50), image80, 0, 0);
+  gtk_widget_set_size_request (image80, 1168, 700);
 
   label220 = gtk_label_new (_("<span foreground=\"salmon\" ><b>Modifier</b></span>"));
   gtk_widget_show (label220);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 2), label220);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 3), label220);
   gtk_widget_set_size_request (label220, 70, 40);
   gtk_label_set_use_markup (GTK_LABEL (label220), TRUE);
 
@@ -2244,7 +2262,7 @@ create_Gestion_utilisateurs (void)
 
   label214 = gtk_label_new (_("<span foreground=\"salmon\" ><b>Supprimer</b></span>"));
   gtk_widget_show (label214);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 3), label214);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), label214);
   gtk_widget_set_size_request (label214, 80, 40);
   gtk_label_set_use_markup (GTK_LABEL (label214), TRUE);
 
@@ -2285,7 +2303,7 @@ create_Gestion_utilisateurs (void)
 
   label212 = gtk_label_new (_("<span foreground=\"salmon\" ><b>Afficher</b></span>"));
   gtk_widget_show (label212);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 4), label212);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook5), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook5), 5), label212);
   gtk_widget_set_size_request (label212, 70, 40);
   gtk_label_set_use_markup (GTK_LABEL (label212), TRUE);
 
@@ -2813,6 +2831,9 @@ create_Gestion_utilisateurs (void)
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image25, "image25");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, comboboxentry3, "comboboxentry3");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Ajouter_, "Ajouter_");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed51, "fixed51");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image81, "image81");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label221, "label221");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed27, "fixed27");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry25, "entry25");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry26, "entry26");
