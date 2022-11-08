@@ -3076,7 +3076,7 @@ create_Gestion_du_BV (void)
   image74 = create_pixmap (Gestion_du_BV, "314872982_490099776226899_2862837691475170518_n.png");
   gtk_widget_show (image74);
   gtk_fixed_put (GTK_FIXED (fixed48), image74, 0, 0);
-  gtk_widget_set_size_request (image74, 1150, 800);
+  gtk_widget_set_size_request (image74, 1200, 800);
 
   label218 = gtk_label_new (_("<span foreground=\"black\" ><b>Identifiant</b></span>"));
   gtk_widget_show (label218);
@@ -3172,6 +3172,7 @@ create_Gestion_du_BV (void)
   fixed49 = gtk_fixed_new ();
   gtk_widget_show (fixed49);
   gtk_fixed_put (GTK_FIXED (fixed48), fixed49, 88, 40);
+  gtk_widget_set_size_request (fixed49, 0, 0);
 
   label224 = gtk_label_new ("");
   gtk_widget_show (label224);
@@ -3220,8 +3221,8 @@ create_Gestion_du_BV (void)
 
   image76 = create_pixmap (Gestion_du_BV, "314872982_490099776226899_2862837691475170518_n.png");
   gtk_widget_show (image76);
-  gtk_fixed_put (GTK_FIXED (fixed50), image76, 8, 0);
-  gtk_widget_set_size_request (image76, 1150, 800);
+  gtk_fixed_put (GTK_FIXED (fixed50), image76, 0, 0);
+  gtk_widget_set_size_request (image76, 1200, 800);
 
   label235 = gtk_label_new (_("<span foreground=\"black\" ><b>Identifiant</b></span>"));
   gtk_widget_show (label235);
@@ -3372,7 +3373,7 @@ create_Gestion_du_BV (void)
   image78 = create_pixmap (Gestion_du_BV, "314872982_490099776226899_2862837691475170518_n.png");
   gtk_widget_show (image78);
   gtk_fixed_put (GTK_FIXED (fixed51), image78, 0, 0);
-  gtk_widget_set_size_request (image78, 1150, 800);
+  gtk_widget_set_size_request (image78, 1200, 800);
 
   button47 = gtk_button_new ();
   gtk_widget_show (button47);
@@ -3419,7 +3420,7 @@ create_Gestion_du_BV (void)
   image80 = create_pixmap (Gestion_du_BV, "314872982_490099776226899_2862837691475170518_n.png");
   gtk_widget_show (image80);
   gtk_fixed_put (GTK_FIXED (fixed52), image80, 0, 0);
-  gtk_widget_set_size_request (image80, 1150, 800);
+  gtk_widget_set_size_request (image80, 1200, 800);
 
   button48 = gtk_button_new ();
   gtk_widget_show (button48);

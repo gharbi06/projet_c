@@ -7777,7 +7777,7 @@ liste6</property>
 
 	  <child>
 	    <widget class="GtkImage" id="image74">
-	      <property name="width_request">1150</property>
+	      <property name="width_request">1200</property>
 	      <property name="height_request">800</property>
 	      <property name="visible">True</property>
 	      <property name="pixbuf">314872982_490099776226899_2862837691475170518_n.png</property>
@@ -8338,7 +8338,7 @@ liste6</property>
 
 	  <child>
 	    <widget class="GtkImage" id="image76">
-	      <property name="width_request">1150</property>
+	      <property name="width_request">1200</property>
 	      <property name="height_request">800</property>
 	      <property name="visible">True</property>
 	      <property name="pixbuf">314872982_490099776226899_2862837691475170518_n.png</property>
@@ -8348,7 +8348,7 @@ liste6</property>
 	      <property name="ypad">0</property>
 	    </widget>
 	    <packing>
-	      <property name="x">8</property>
+	      <property name="x">0</property>
 	      <property name="y">0</property>
 	    </packing>
 	  </child>
@@ -8929,7 +8929,7 @@ liste6</property>
 
 	  <child>
 	    <widget class="GtkImage" id="image78">
-	      <property name="width_request">1150</property>
+	      <property name="width_request">1200</property>
 	      <property name="height_request">800</property>
 	      <property name="visible">True</property>
 	      <property name="pixbuf">314872982_490099776226899_2862837691475170518_n.png</property>
@@ -9107,7 +9107,7 @@ liste6</property>
 
 	  <child>
 	    <widget class="GtkImage" id="image80">
-	      <property name="width_request">1150</property>
+	      <property name="width_request">1200</property>
 	      <property name="height_request">800</property>
 	      <property name="visible">True</property>
 	      <property name="pixbuf">314872982_490099776226899_2862837691475170518_n.png</property>
