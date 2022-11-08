@@ -481,8 +481,6 @@ create_Gestion_observateurs (void)
   GtkWidget *label193;
   GtkWidget *label163;
   GtkWidget *label162;
-  GtkWidget *label212;
-  GtkWidget *label213;
   GtkWidget *label164;
   GtkWidget *fixed46;
   GtkWidget *image71;
@@ -895,14 +893,6 @@ create_Gestion_observateurs (void)
   gtk_fixed_put (GTK_FIXED (fixed40), label162, 320, 56);
   gtk_widget_set_size_request (label162, 160, 40);
   gtk_label_set_use_markup (GTK_LABEL (label162), TRUE);
-
-  label212 = gtk_label_new_with_mnemonic (_("Annuler"));
-  gtk_widget_show (label212);
-  gtk_fixed_put (GTK_FIXED (fixed40), label212, 0, 0);
-
-  label213 = gtk_label_new_with_mnemonic (_("Annuler"));
-  gtk_widget_show (label213);
-  gtk_fixed_put (GTK_FIXED (fixed40), label213, 0, 0);
 
   label164 = gtk_label_new (_("<span foreground=\"salmon\" ><b>Modifier</b></span>"));
   gtk_widget_show (label164);
@@ -1406,8 +1396,6 @@ create_Gestion_observateurs (void)
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, label193, "label193");
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, label163, "label163");
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, label162, "label162");
-  GLADE_HOOKUP_OBJECT (Gestion_observateurs, label212, "label212");
-  GLADE_HOOKUP_OBJECT (Gestion_observateurs, label213, "label213");
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, label164, "label164");
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, fixed46, "fixed46");
   GLADE_HOOKUP_OBJECT (Gestion_observateurs, image71, "image71");
@@ -3054,18 +3042,12 @@ create_Gestion_du_BV (void)
   GtkWidget *label67;
   GtkWidget *Supprimer;
   GtkWidget *fixed15;
-  GtkWidget *clist3;
-  GtkWidget *label68;
-  GtkWidget *label69;
-  GtkWidget *label70;
-  GtkWidget *label71;
-  GtkWidget *label72;
-  GtkWidget *label73;
   GtkWidget *button10;
   GtkWidget *alignment12;
   GtkWidget *hbox14;
   GtkWidget *image22;
   GtkWidget *label74;
+  GtkWidget *treeview7;
   GtkWidget *Afficher;
   GtkWidget *fixed16;
   GtkWidget *button11;
@@ -3391,42 +3373,6 @@ create_Gestion_du_BV (void)
   gtk_widget_show (fixed15);
   gtk_container_add (GTK_CONTAINER (notebook3), fixed15);
 
-  clist3 = gtk_clist_new (6);
-  gtk_widget_show (clist3);
-  gtk_fixed_put (GTK_FIXED (fixed15), clist3, 152, 224);
-  gtk_widget_set_size_request (clist3, 832, 144);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 0, 80);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 1, 80);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 2, 80);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 3, 80);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 4, 80);
-  gtk_clist_set_column_width (GTK_CLIST (clist3), 5, 80);
-  gtk_clist_column_titles_show (GTK_CLIST (clist3));
-
-  label68 = gtk_label_new (_("label68"));
-  gtk_widget_show (label68);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 0, label68);
-
-  label69 = gtk_label_new (_("label69"));
-  gtk_widget_show (label69);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 1, label69);
-
-  label70 = gtk_label_new (_("label70"));
-  gtk_widget_show (label70);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 2, label70);
-
-  label71 = gtk_label_new (_("label71"));
-  gtk_widget_show (label71);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 3, label71);
-
-  label72 = gtk_label_new (_("label72"));
-  gtk_widget_show (label72);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 4, label72);
-
-  label73 = gtk_label_new (_("label73"));
-  gtk_widget_show (label73);
-  gtk_clist_set_column_widget (GTK_CLIST (clist3), 5, label73);
-
   button10 = gtk_button_new ();
   gtk_widget_show (button10);
   gtk_fixed_put (GTK_FIXED (fixed15), button10, 464, 96);
@@ -3447,6 +3393,11 @@ create_Gestion_du_BV (void)
   label74 = gtk_label_new_with_mnemonic (_("Afficher"));
   gtk_widget_show (label74);
   gtk_box_pack_start (GTK_BOX (hbox14), label74, FALSE, FALSE, 0);
+
+  treeview7 = gtk_tree_view_new ();
+  gtk_widget_show (treeview7);
+  gtk_fixed_put (GTK_FIXED (fixed15), treeview7, 384, 264);
+  gtk_widget_set_size_request (treeview7, 300, 200);
 
   Afficher = gtk_label_new (_("Afficher"));
   gtk_widget_show (Afficher);
@@ -3537,18 +3488,12 @@ create_Gestion_du_BV (void)
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, label67, "label67");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, Supprimer, "Supprimer");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, fixed15, "fixed15");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, clist3, "clist3");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label68, "label68");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label69, "label69");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label70, "label70");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label71, "label71");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label72, "label72");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, label73, "label73");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, button10, "button10");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, alignment12, "alignment12");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, hbox14, "hbox14");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, image22, "image22");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, label74, "label74");
+  GLADE_HOOKUP_OBJECT (Gestion_du_BV, treeview7, "treeview7");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, Afficher, "Afficher");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, fixed16, "fixed16");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, button11, "button11");
