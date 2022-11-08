@@ -19,7 +19,7 @@ Date D;
 
 } utilisateur;
 
-void ajouter(utilisateur u, char filename []);
+int ajouter(utilisateur u, char filename []);
 int modifier(int id, utilisateur u , char * filename);
 int supprimer(int id, char * filename);
 utilisateur chercher(int id, char * filename);
