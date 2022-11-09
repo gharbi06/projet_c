@@ -24,11 +24,11 @@ int Type_de_reclamation [4];
 
 int ajouter(observateur o , char * filename);
 
-int modifier(observateur nouv,int Identifiant,int  Numero_de_reclamation, char * obsevrateur);
+int modifier(observateur nouv,int Identifiant,int  Numero_de_reclamation, char * filename);
 
-int supprimer (int Ident,int Numero_de_reclamation , char * obsevrateur);
+int supprimer (int Ident,int Numero_de_reclamation , char * filename);
 
-observateur chercher(int Identifiant,int Numero_de_reclamation, char * obsevrateur);
+observateur chercher(int Identifiant,int Numero_de_reclamation, char * filename);
 
 
 #endif // FONCTION_H_INCLUDED
