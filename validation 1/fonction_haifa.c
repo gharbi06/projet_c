@@ -6,10 +6,9 @@
 { 
     FILE * f=fopen(filename, "a");
     if(f!=NULL)
-{
-      fprintf(f," cin,nom,prenom,email,telephone,role,sexe,D	ate :jour,mois,anne,mot_de_passe ,bureau_vote" );
-fscanf(f,"%d %s %s %s %d %s %d %d %d %d %d %d",&u.cin,u.nom,u.prenom,u.email,&u.tel,u.role,&u.sexe,&u.D.jour,&u.D.mois,&u.D.anne,&u.mot_de_passe,&u.bureau_vote )   ;
+{fprintf(f,"%d %s %s %s %d %s %d %d %d %d %d %d\n",u.cin,u.nom,u.prenom,u.email,u.tel,u.role,u.sexe,u.D.jour,u.D.mois,u.D.anne,u.mot_de_passe,u.bureau_vote );
  fclose(f);
+//printf("test ok \n");
         return 1;
 }
 else return 0;
@@ -59,7 +58,7 @@ else
 while(fscanf(f,"%d %s %s %s %d %s %d %d %d %d %d %d",&u.cin,u.nom,u.prenom,u.email,&u.tel,u.role,&u.sexe,&u.D.jour,&u.D.mois,&u.D.anne,&u.mot_de_passe,&u.bureau_vote )!=EOF)
 {
 if(u.cin!=id)
-      {   fprintf(f2,"%d %s %s %s %d %s %d %d %d %d %d %d",u.cin,u.nom,u.prenom,u.email,u.tel,u.role,u.sexe,u.D.jour,u.D.mois,u.D.anne,u.mot_de_passe,u.bureau_vote );
+      {   fprintf(f2,"%d %s %s %s %d %s %d %d %d %d %d %d\n",u.cin,u.nom,u.prenom,u.email,u.tel,u.role,u.sexe,u.D.jour,u.D.mois,u.D.anne,u.mot_de_passe,u.bureau_vote );
 
 }
 }
