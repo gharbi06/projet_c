@@ -12,7 +12,7 @@ observateur o2={"2",1,2,3,"media",{1,1,0,0}};
  /*int x=ajouter( o1,"obsevrateur.txt");
  if(x==1)
         printf("\najout de la reclamation avec succés\n");
-    else printf("\nechec ajout\n"); */
+    else printf("\nechec ajout\n");*/ 
 
 
 
@@ -36,9 +36,9 @@ observateur o2={"2",1,2,3,"media",{1,1,0,0}};
 
 
     o3=chercher("1",1,"obsevrateur.txt");
-    if((o3.Identifiant=="-1")&&(o3.Numero_de_reclamation=-1))
-        printf("\nl'identifiant que vous cherchez introuvable\n"); 
-        else printf("\nok \n"); 
+    if(((strcmp(o3.Identifiant,"-1")==0))&&(o3.Numero_de_reclamation=-1))
+       { printf("\nl'identifiant que vous cherchez introuvable\n");} 
+        else {printf("\nl'identifiant que vous chercher est trouvable!!!\n");} 
 
 
 

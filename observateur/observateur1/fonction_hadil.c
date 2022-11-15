@@ -72,7 +72,7 @@ int supprimer (char Identifiant[50],int Numero_de_reclamation , char * filename)
 observateur chercher(char Identifiant[50],int Numero_de_reclamation, char * filename)
 {
     observateur o;
-    int tr;
+    int tr=0;
     FILE * f=fopen(filename, "r");
     if(f!=NULL)
     {
