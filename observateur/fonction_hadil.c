@@ -7,7 +7,7 @@ int ajouter( observateur o, char * filename)
     FILE * f=fopen(filename, "a");
     if(f!=NULL)
     {
-        fprintf(f,"%d %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
+        fprintf(f,"%s %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
         fclose(f);
         return 1;
     }
@@ -18,7 +18,7 @@ int ajouter( observateur o, char * filename)
 }
 
 
-int modifier(observateur nouv,int Identifiant,int  Numero_de_reclamation, char * filename)
+int modifier(observateur nouv,int Identifiant[50],int  Numero_de_reclamation, char * filename)
 {
     int tr=0;
     observateur o;
@@ -26,15 +26,15 @@ int modifier(observateur nouv,int Identifiant,int  Numero_de_reclamation, char *
     FILE * f2=fopen("nouv.txt", "w");
     if(f!=NULL && f2!=NULL)
     {
-        while(fscanf(f,"%d %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
+        while(fscanf(f,"%s %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
         {
             if((o.Identifiant== Identifiant)&&(o.Numero_de_reclamation==Numero_de_reclamation))
             {
-                fprintf(f2,"%d %d %d %d %s %d \n",nouv.Identifiant,nouv.Numero_de_reclamation,nouv.Numero_de_BV,nouv.List_electoral,nouv.Reclamation,nouv.Type_de_reclamation);
+                fprintf(f2,"%s %d %d %d %s %d \n",nouv.Identifiant,nouv.Numero_de_reclamation,nouv.Numero_de_BV,nouv.List_electoral,nouv.Reclamation,nouv.Type_de_reclamation);
                 tr=1;
             }
             else
-                fprintf(f2,"%d %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
+                fprintf(f2,"%s %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
 
         }
     }
@@ -45,7 +45,7 @@ int modifier(observateur nouv,int Identifiant,int  Numero_de_reclamation, char *
     return tr;
 
 }
-int supprimer(int Identifiant,int Numero_de_reclamation, char * filename)
+int supprimer(int Identifiant[50],int Numero_de_reclamation, char * filename)
 {
     int tr=0;
     observateur o;
@@ -53,12 +53,12 @@ int supprimer(int Identifiant,int Numero_de_reclamation, char * filename)
     FILE * f2=fopen("nouv.txt", "w");
     if(f!=NULL && f2!=NULL)
     {
-        while(fscanf(f,"%d %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
+        while(fscanf(f,"%s %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
         {
             if((o.Identifiant == Identifiant)&&(o.Numero_de_reclamation==Numero_de_reclamation))
                 tr=1;
             else
-                fprintf(f2,"%d %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
+                fprintf(f2,"%s %d %d %d %s %d \n",o.Identifiant,o.Numero_de_reclamation,o.Numero_de_BV,o.List_electoral,o.Reclamation,o.Type_de_reclamation);
         }
     }
     fclose(f);
@@ -67,14 +67,14 @@ int supprimer(int Identifiant,int Numero_de_reclamation, char * filename)
     rename("nouv.txt", filename);
     return tr;
 }
-observateur chercher(int Identifiant,int Numero_de_reclamation, char * filename)
+observateur chercher(char Identifiant[50],int Numero_de_reclamation, char * filename)
 {
     observateur o;
     int tr;
     FILE * f=fopen(filename, "r");
     if(f!=NULL)
     {
-        while(tr==0&& fscanf(f,"%d %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
+        while(tr==0&& fscanf(f,"%s %d %d %d %s %d \n",&o.Identifiant,&o.Numero_de_reclamation,&o.Numero_de_BV,&o.List_electoral,&o.Reclamation,&o.Type_de_reclamation)!=EOF)
         {
             if((o.Identifiant == Identifiant)&&(o.Numero_de_reclamation==Numero_de_reclamation))
                 tr=1;
