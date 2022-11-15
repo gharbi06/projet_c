@@ -14,7 +14,7 @@ int List_electoral;
 
 char Reclamation[200];
 
-int Type_de_reclamation [4];
+int Type_de_reclamation[4];
 
 
 
