@@ -35,12 +35,15 @@ observateur o2={"2",1,2,3,"media",{1,1,0,0}};
 
 
 
-    o3=chercher("1",1,"obsevrateur.txt");
+   /* o3=chercher("1",1,"obsevrateur.txt");
     if(((strcmp(o3.Identifiant,"-1")==0))&&(o3.Numero_de_reclamation=-1))
        { printf("\nl'identifiant que vous cherchez introuvable\n");} 
-        else {printf("\nl'identifiant que vous chercher est trouvable!!!\n");} 
+        else {printf("\nl'identifiant que vous chercher est trouvable!!!\n");} */
 
-
+// statistique 
+int x;
+x= nbreclamation(1,"observateur.txt");
+printf("le nombre de reclamation pour la liste electorale 2 :%d",x);
 
 return 0;}
 
