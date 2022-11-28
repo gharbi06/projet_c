@@ -3459,6 +3459,7 @@ create_Gestion_observateurs (void)
   fixed71 = gtk_fixed_new ();
   gtk_widget_show (fixed71);
   gtk_fixed_put (GTK_FIXED (fixed69), fixed71, 0, 0);
+  gtk_widget_set_size_request (fixed71, 0, 0);
 
   entry77 = gtk_entry_new ();
   gtk_widget_show (entry77);
