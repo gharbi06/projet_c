@@ -5,13 +5,6 @@ void
 on_Valider_clicked                     (GtkButton       *button,
                                         gpointer         user_data);
 
-void
-on_Valider_clicked                     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Valider_clicked                     (GtkButton       *button,
-                                        gpointer         user_data);
 
 void
 on_button2_clicked                     (GtkButton       *button,
@@ -34,7 +27,7 @@ on_button6_clicked                     (GtkButton       *button,
                                         gpointer         user_data);
 
 void
-on_buttonsouhailaj_clicked             (GtkButton       *button,
+on_buttonsouhailaj_clicked             (GtkWidget     *objet,
                                         gpointer         user_data);
 
 void
@@ -51,4 +44,32 @@ on_buttonsouhailaff_clicked            (GtkButton       *button,
 
 void
 on_button27_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonconfha_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonmodha_clicked                 (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttoncherha_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonaffha_clicked                 (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on__buttonsuppha_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttoncherha2_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Validerauth_clicked                 (GtkButton       *button,
                                         gpointer         user_data);
