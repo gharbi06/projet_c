@@ -971,25 +971,15 @@ create_Gestion_utilisateurs (void)
   GtkWidget *Utilisateur_;
   GtkWidget *notebook6;
   GtkWidget *fixed___lection;
-  GtkObject *jour_adj;
-  GtkWidget *jour;
-  GtkObject *mois_adj;
-  GtkWidget *mois;
-  GtkObject *annee_adj;
-  GtkWidget *annee;
-  GtkWidget *entry17;
-  GtkWidget *entry18;
+  GtkObject *joursou_adj;
+  GtkWidget *joursou;
+  GtkObject *moissou_adj;
+  GtkWidget *moissou;
+  GtkObject *anneesou_adj;
+  GtkWidget *anneesou;
+  GtkWidget *entrysouhailaj;
+  GtkWidget *entrysouhailaj1;
   GtkWidget *Erreur_election;
-  GtkWidget *button20;
-  GtkWidget *alignment22;
-  GtkWidget *hbox24;
-  GtkWidget *image34;
-  GtkWidget *label103;
-  GtkWidget *button21;
-  GtkWidget *alignment23;
-  GtkWidget *hbox25;
-  GtkWidget *image35;
-  GtkWidget *label104;
   GtkWidget *radiobutton19;
   GSList *radiobutton19_group = NULL;
   GtkWidget *radiobutton18;
@@ -1000,59 +990,64 @@ create_Gestion_utilisateurs (void)
   GtkWidget *municipalit__;
   GtkWidget *DateE;
   GtkWidget *combobox1;
+  GtkWidget *buttonsouhailaj;
+  GtkWidget *alignment23;
+  GtkWidget *hbox25;
+  GtkWidget *image35;
+  GtkWidget *label104;
   GtkWidget *label281;
-  GtkWidget *Ajouter;
+  GtkWidget *Ajoutersouhail;
   GtkWidget *fixed29;
   GtkWidget *fixed30;
-  GtkWidget *entry33;
+  GtkWidget *entrysouhailmod;
   GtkWidget *button22;
   GtkWidget *alignment24;
   GtkWidget *hbox26;
   GtkWidget *image36;
   GtkWidget *label106;
-  GtkWidget *radiobutton26;
-  GtkWidget *radiobutton27;
-  GtkWidget *radiobutton25;
-  GtkWidget *entry34;
-  GtkWidget *comboboxentry7;
-  GtkWidget *button23;
-  GtkWidget *alignment25;
-  GtkWidget *hbox27;
-  GtkWidget *image37;
-  GtkWidget *label110;
+  GtkWidget *entrysouhailmod;
   GtkWidget *identifiant;
   GtkWidget *nb_habitants;
   GtkWidget *nb_conseillers;
   GtkWidget *municipalite;
-  GtkWidget *Modifier;
+  GtkWidget *radiobuttonmod;
+  GtkWidget *radiobuttonmod;
+  GtkWidget *radiobuttonmod;
+  GtkWidget *comboboxentry7;
+  GtkWidget *buttonsouhailmod;
+  GtkWidget *alignment25;
+  GtkWidget *hbox27;
+  GtkWidget *image37;
+  GtkWidget *label110;
+  GtkWidget *Modifiersouhail;
   GtkWidget *fixed31;
   GtkWidget *treeview3;
-  GtkWidget *entry70;
-  GtkWidget *button26;
+  GtkWidget *entrysouhailsup;
+  GtkWidget *identifiant;
+  GtkWidget *checkbutton29;
+  GtkWidget *buttonsouhailsup;
   GtkWidget *alignment28;
   GtkWidget *hbox30;
   GtkWidget *image40;
   GtkWidget *label115;
-  GtkWidget *identifiant;
-  GtkWidget *checkbutton29;
-  GtkWidget *Supprimer;
+  GtkWidget *Supprimersouhail;
   GtkWidget *fixed32;
   GtkWidget *treeview4;
+  GtkWidget *entrysouhailaff;
+  GtkWidget *comboboxentry14;
+  GtkWidget *identifiant;
+  GtkWidget *municipalite;
+  GtkWidget *buttonsouhailaff;
+  GtkWidget *alignment65;
+  GtkWidget *hbox67;
+  GtkWidget *image101;
+  GtkWidget *label283;
   GtkWidget *button27;
   GtkWidget *alignment29;
   GtkWidget *hbox31;
   GtkWidget *image41;
   GtkWidget *label116;
-  GtkWidget *entry69;
-  GtkWidget *comboboxentry14;
-  GtkWidget *button61;
-  GtkWidget *alignment65;
-  GtkWidget *hbox67;
-  GtkWidget *image101;
-  GtkWidget *label283;
-  GtkWidget *identifiant;
-  GtkWidget *municipalite;
-  GtkWidget *Afficher;
+  GtkWidget *Affichersouhail;
   GtkWidget *__lection_;
   GtkWidget *table1;
   GtkWidget *fixed5;
@@ -1599,82 +1594,40 @@ create_Gestion_utilisateurs (void)
   gtk_widget_show (fixed___lection);
   gtk_container_add (GTK_CONTAINER (notebook6), fixed___lection);
 
-  jour_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
-  jour = gtk_spin_button_new (GTK_ADJUSTMENT (jour_adj), 1, 0);
-  gtk_widget_show (jour);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), jour, 170, 16);
-  gtk_widget_set_size_request (jour, 60, 27);
+  joursou_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
+  joursou = gtk_spin_button_new (GTK_ADJUSTMENT (joursou_adj), 1, 0);
+  gtk_widget_show (joursou);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), joursou, 170, 16);
+  gtk_widget_set_size_request (joursou, 60, 27);
 
-  mois_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
-  mois = gtk_spin_button_new (GTK_ADJUSTMENT (mois_adj), 1, 0);
-  gtk_widget_show (mois);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), mois, 240, 16);
-  gtk_widget_set_size_request (mois, 60, 27);
+  moissou_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
+  moissou = gtk_spin_button_new (GTK_ADJUSTMENT (moissou_adj), 1, 0);
+  gtk_widget_show (moissou);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), moissou, 240, 16);
+  gtk_widget_set_size_request (moissou, 60, 27);
 
-  annee_adj = gtk_adjustment_new (1, 1990, 2020, 1, 10, 10);
-  annee = gtk_spin_button_new (GTK_ADJUSTMENT (annee_adj), 1, 0);
-  gtk_widget_show (annee);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), annee, 312, 16);
-  gtk_widget_set_size_request (annee, 60, 27);
+  anneesou_adj = gtk_adjustment_new (1, 1990, 2020, 1, 10, 10);
+  anneesou = gtk_spin_button_new (GTK_ADJUSTMENT (anneesou_adj), 1, 0);
+  gtk_widget_show (anneesou);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), anneesou, 312, 16);
+  gtk_widget_set_size_request (anneesou, 60, 27);
 
-  entry17 = gtk_entry_new ();
-  gtk_widget_show (entry17);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), entry17, 170, 80);
-  gtk_widget_set_size_request (entry17, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry17), 8226);
+  entrysouhailaj = gtk_entry_new ();
+  gtk_widget_show (entrysouhailaj);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), entrysouhailaj, 168, 72);
+  gtk_widget_set_size_request (entrysouhailaj, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailaj), 8226);
 
-  entry18 = gtk_entry_new ();
-  gtk_widget_show (entry18);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), entry18, 170, 184);
-  gtk_widget_set_size_request (entry18, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry18), 8226);
+  entrysouhailaj1 = gtk_entry_new ();
+  gtk_widget_show (entrysouhailaj1);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), entrysouhailaj1, 170, 184);
+  gtk_widget_set_size_request (entrysouhailaj1, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailaj1), 8226);
 
   Erreur_election = gtk_label_new ("");
   gtk_widget_show (Erreur_election);
   gtk_fixed_put (GTK_FIXED (fixed___lection), Erreur_election, 432, 352);
   gtk_widget_set_size_request (Erreur_election, 224, 25);
-
-  button20 = gtk_button_new ();
-  gtk_widget_show (button20);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), button20, 392, 256);
-  gtk_widget_set_size_request (button20, 160, 40);
-
-  alignment22 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment22);
-  gtk_container_add (GTK_CONTAINER (button20), alignment22);
-
-  hbox24 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox24);
-  gtk_container_add (GTK_CONTAINER (alignment22), hbox24);
-
-  image34 = gtk_image_new_from_stock ("gtk-cancel", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image34);
-  gtk_box_pack_start (GTK_BOX (hbox24), image34, FALSE, FALSE, 0);
-
-  label103 = gtk_label_new_with_mnemonic (_("Annuler"));
-  gtk_widget_show (label103);
-  gtk_box_pack_start (GTK_BOX (hbox24), label103, FALSE, FALSE, 0);
-
-  button21 = gtk_button_new ();
-  gtk_widget_show (button21);
-  gtk_fixed_put (GTK_FIXED (fixed___lection), button21, 552, 256);
-  gtk_widget_set_size_request (button21, 160, 40);
-
-  alignment23 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment23);
-  gtk_container_add (GTK_CONTAINER (button21), alignment23);
-
-  hbox25 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox25);
-  gtk_container_add (GTK_CONTAINER (alignment23), hbox25);
-
-  image35 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image35);
-  gtk_box_pack_start (GTK_BOX (hbox25), image35, FALSE, FALSE, 0);
-
-  label104 = gtk_label_new_with_mnemonic (_("Confirmer"));
-  gtk_widget_show (label104);
-  gtk_box_pack_start (GTK_BOX (hbox25), label104, FALSE, FALSE, 0);
 
   radiobutton19 = gtk_radio_button_new_with_mnemonic (NULL, _("de plus 500.000 habitants"));
   gtk_widget_show (radiobutton19);
@@ -1732,15 +1685,36 @@ create_Gestion_utilisateurs (void)
   gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1), _("beja"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1), _("touzer"));
 
+  buttonsouhailaj = gtk_button_new ();
+  gtk_widget_show (buttonsouhailaj);
+  gtk_fixed_put (GTK_FIXED (fixed___lection), buttonsouhailaj, 552, 256);
+  gtk_widget_set_size_request (buttonsouhailaj, 160, 40);
+
+  alignment23 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment23);
+  gtk_container_add (GTK_CONTAINER (buttonsouhailaj), alignment23);
+
+  hbox25 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox25);
+  gtk_container_add (GTK_CONTAINER (alignment23), hbox25);
+
+  image35 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image35);
+  gtk_box_pack_start (GTK_BOX (hbox25), image35, FALSE, FALSE, 0);
+
+  label104 = gtk_label_new_with_mnemonic (_("Confirmer"));
+  gtk_widget_show (label104);
+  gtk_box_pack_start (GTK_BOX (hbox25), label104, FALSE, FALSE, 0);
+
   label281 = gtk_label_new ("");
   gtk_widget_show (label281);
   gtk_fixed_put (GTK_FIXED (fixed___lection), label281, 792, 256);
   gtk_widget_set_size_request (label281, 232, 40);
 
-  Ajouter = gtk_label_new (_("Ajouter"));
-  gtk_widget_show (Ajouter);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 0), Ajouter);
-  gtk_widget_set_size_request (Ajouter, 70, 40);
+  Ajoutersouhail = gtk_label_new (_("Ajouter"));
+  gtk_widget_show (Ajoutersouhail);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 0), Ajoutersouhail);
+  gtk_widget_set_size_request (Ajoutersouhail, 70, 40);
 
   fixed29 = gtk_fixed_new ();
   gtk_widget_show (fixed29);
@@ -1751,11 +1725,11 @@ create_Gestion_utilisateurs (void)
   gtk_fixed_put (GTK_FIXED (fixed29), fixed30, 616, 424);
   gtk_widget_set_size_request (fixed30, 50, 50);
 
-  entry33 = gtk_entry_new ();
-  gtk_widget_show (entry33);
-  gtk_fixed_put (GTK_FIXED (fixed29), entry33, 248, 32);
-  gtk_widget_set_size_request (entry33, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry33), 8226);
+  entrysouhailmod = gtk_entry_new ();
+  gtk_widget_show (entrysouhailmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), entrysouhailmod, 248, 32);
+  gtk_widget_set_size_request (entrysouhailmod, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailmod), 8226);
 
   button22 = gtk_button_new ();
   gtk_widget_show (button22);
@@ -1778,59 +1752,11 @@ create_Gestion_utilisateurs (void)
   gtk_widget_show (label106);
   gtk_box_pack_start (GTK_BOX (hbox26), label106, FALSE, FALSE, 0);
 
-  radiobutton26 = gtk_radio_button_new_with_mnemonic (NULL, _("de 50.000 a 500.000 habitants"));
-  gtk_widget_show (radiobutton26);
-  gtk_fixed_put (GTK_FIXED (fixed29), radiobutton26, 384, 136);
-  gtk_widget_set_size_request (radiobutton26, 240, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton26), radiobutton19_group);
-  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton26));
-
-  radiobutton27 = gtk_radio_button_new_with_mnemonic (NULL, _("de plus 500.000 habitants"));
-  gtk_widget_show (radiobutton27);
-  gtk_fixed_put (GTK_FIXED (fixed29), radiobutton27, 632, 136);
-  gtk_widget_set_size_request (radiobutton27, 256, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton27), radiobutton19_group);
-  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton27));
-
-  radiobutton25 = gtk_radio_button_new_with_mnemonic (NULL, _(" jusqu'a 50.000 habitants"));
-  gtk_widget_show (radiobutton25);
-  gtk_fixed_put (GTK_FIXED (fixed29), radiobutton25, 170, 136);
-  gtk_widget_set_size_request (radiobutton25, 200, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton25), radiobutton19_group);
-  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton25));
-
-  entry34 = gtk_entry_new ();
-  gtk_widget_show (entry34);
-  gtk_fixed_put (GTK_FIXED (fixed29), entry34, 170, 184);
-  gtk_widget_set_size_request (entry34, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry34), 8226);
-
-  comboboxentry7 = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (comboboxentry7);
-  gtk_fixed_put (GTK_FIXED (fixed29), comboboxentry7, 170, 232);
-  gtk_widget_set_size_request (comboboxentry7, 189, 29);
-
-  button23 = gtk_button_new ();
-  gtk_widget_show (button23);
-  gtk_fixed_put (GTK_FIXED (fixed29), button23, 448, 288);
-  gtk_widget_set_size_request (button23, 160, 40);
-  gtk_container_set_border_width (GTK_CONTAINER (button23), 4);
-
-  alignment25 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment25);
-  gtk_container_add (GTK_CONTAINER (button23), alignment25);
-
-  hbox27 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox27);
-  gtk_container_add (GTK_CONTAINER (alignment25), hbox27);
-
-  image37 = gtk_image_new_from_stock ("gtk-edit", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image37);
-  gtk_box_pack_start (GTK_BOX (hbox27), image37, FALSE, FALSE, 0);
-
-  label110 = gtk_label_new_with_mnemonic (_("Modifier"));
-  gtk_widget_show (label110);
-  gtk_box_pack_start (GTK_BOX (hbox27), label110, FALSE, FALSE, 0);
+  entrysouhailmod = gtk_entry_new ();
+  gtk_widget_show (entrysouhailmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), entrysouhailmod, 170, 184);
+  gtk_widget_set_size_request (entrysouhailmod, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailmod), 8226);
 
   identifiant = gtk_label_new (_("identifiant"));
   gtk_widget_show (identifiant);
@@ -1852,9 +1778,57 @@ create_Gestion_utilisateurs (void)
   gtk_fixed_put (GTK_FIXED (fixed29), municipalite, 0, 224);
   gtk_widget_set_size_request (municipalite, 160, 40);
 
-  Modifier = gtk_label_new (_("Modifier"));
-  gtk_widget_show (Modifier);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 1), Modifier);
+  radiobuttonmod = gtk_radio_button_new_with_mnemonic (NULL, _(" jusqu'a 50.000 habitants"));
+  gtk_widget_show (radiobuttonmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), radiobuttonmod, 170, 136);
+  gtk_widget_set_size_request (radiobuttonmod, 200, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonmod), radiobutton19_group);
+  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonmod));
+
+  radiobuttonmod = gtk_radio_button_new_with_mnemonic (NULL, _("de 50.000 a 500.000 habitants"));
+  gtk_widget_show (radiobuttonmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), radiobuttonmod, 384, 136);
+  gtk_widget_set_size_request (radiobuttonmod, 240, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonmod), radiobutton19_group);
+  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonmod));
+
+  radiobuttonmod = gtk_radio_button_new_with_mnemonic (NULL, _("de plus 500.000 habitants"));
+  gtk_widget_show (radiobuttonmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), radiobuttonmod, 632, 136);
+  gtk_widget_set_size_request (radiobuttonmod, 256, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonmod), radiobutton19_group);
+  radiobutton19_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonmod));
+
+  comboboxentry7 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (comboboxentry7);
+  gtk_fixed_put (GTK_FIXED (fixed29), comboboxentry7, 170, 232);
+  gtk_widget_set_size_request (comboboxentry7, 189, 29);
+
+  buttonsouhailmod = gtk_button_new ();
+  gtk_widget_show (buttonsouhailmod);
+  gtk_fixed_put (GTK_FIXED (fixed29), buttonsouhailmod, 448, 288);
+  gtk_widget_set_size_request (buttonsouhailmod, 160, 40);
+  gtk_container_set_border_width (GTK_CONTAINER (buttonsouhailmod), 4);
+
+  alignment25 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment25);
+  gtk_container_add (GTK_CONTAINER (buttonsouhailmod), alignment25);
+
+  hbox27 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox27);
+  gtk_container_add (GTK_CONTAINER (alignment25), hbox27);
+
+  image37 = gtk_image_new_from_stock ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image37);
+  gtk_box_pack_start (GTK_BOX (hbox27), image37, FALSE, FALSE, 0);
+
+  label110 = gtk_label_new_with_mnemonic (_("Modifier"));
+  gtk_widget_show (label110);
+  gtk_box_pack_start (GTK_BOX (hbox27), label110, FALSE, FALSE, 0);
+
+  Modifiersouhail = gtk_label_new (_("Modifier"));
+  gtk_widget_show (Modifiersouhail);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 1), Modifiersouhail);
 
   fixed31 = gtk_fixed_new ();
   gtk_widget_show (fixed31);
@@ -1865,20 +1839,30 @@ create_Gestion_utilisateurs (void)
   gtk_fixed_put (GTK_FIXED (fixed31), treeview3, 568, 96);
   gtk_widget_set_size_request (treeview3, 581, 263);
 
-  entry70 = gtk_entry_new ();
-  gtk_widget_show (entry70);
-  gtk_fixed_put (GTK_FIXED (fixed31), entry70, 232, 120);
-  gtk_widget_set_size_request (entry70, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry70), 8226);
+  entrysouhailsup = gtk_entry_new ();
+  gtk_widget_show (entrysouhailsup);
+  gtk_fixed_put (GTK_FIXED (fixed31), entrysouhailsup, 232, 120);
+  gtk_widget_set_size_request (entrysouhailsup, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailsup), 8226);
 
-  button26 = gtk_button_new ();
-  gtk_widget_show (button26);
-  gtk_fixed_put (GTK_FIXED (fixed31), button26, 264, 224);
-  gtk_widget_set_size_request (button26, 160, 40);
+  identifiant = gtk_label_new (_("identifiant"));
+  gtk_widget_show (identifiant);
+  gtk_fixed_put (GTK_FIXED (fixed31), identifiant, 0, 104);
+  gtk_widget_set_size_request (identifiant, 294, 56);
+
+  checkbutton29 = gtk_check_button_new_with_mnemonic (_("valider"));
+  gtk_widget_show (checkbutton29);
+  gtk_fixed_put (GTK_FIXED (fixed31), checkbutton29, 264, 160);
+  gtk_widget_set_size_request (checkbutton29, 126, 24);
+
+  buttonsouhailsup = gtk_button_new ();
+  gtk_widget_show (buttonsouhailsup);
+  gtk_fixed_put (GTK_FIXED (fixed31), buttonsouhailsup, 264, 224);
+  gtk_widget_set_size_request (buttonsouhailsup, 160, 40);
 
   alignment28 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment28);
-  gtk_container_add (GTK_CONTAINER (button26), alignment28);
+  gtk_container_add (GTK_CONTAINER (buttonsouhailsup), alignment28);
 
   hbox30 = gtk_hbox_new (FALSE, 2);
   gtk_widget_show (hbox30);
@@ -1892,19 +1876,9 @@ create_Gestion_utilisateurs (void)
   gtk_widget_show (label115);
   gtk_box_pack_start (GTK_BOX (hbox30), label115, FALSE, FALSE, 0);
 
-  identifiant = gtk_label_new (_("identifiant"));
-  gtk_widget_show (identifiant);
-  gtk_fixed_put (GTK_FIXED (fixed31), identifiant, 0, 104);
-  gtk_widget_set_size_request (identifiant, 294, 56);
-
-  checkbutton29 = gtk_check_button_new_with_mnemonic (_("valider"));
-  gtk_widget_show (checkbutton29);
-  gtk_fixed_put (GTK_FIXED (fixed31), checkbutton29, 264, 160);
-  gtk_widget_set_size_request (checkbutton29, 126, 24);
-
-  Supprimer = gtk_label_new (_("Supprimer"));
-  gtk_widget_show (Supprimer);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 2), Supprimer);
+  Supprimersouhail = gtk_label_new (_("Supprimer"));
+  gtk_widget_show (Supprimersouhail);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 2), Supprimersouhail);
 
   fixed32 = gtk_fixed_new ();
   gtk_widget_show (fixed32);
@@ -1914,6 +1888,48 @@ create_Gestion_utilisateurs (void)
   gtk_widget_show (treeview4);
   gtk_fixed_put (GTK_FIXED (fixed32), treeview4, 632, 72);
   gtk_widget_set_size_request (treeview4, 512, 328);
+
+  entrysouhailaff = gtk_entry_new ();
+  gtk_widget_show (entrysouhailaff);
+  gtk_fixed_put (GTK_FIXED (fixed32), entrysouhailaff, 192, 104);
+  gtk_widget_set_size_request (entrysouhailaff, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entrysouhailaff), 8226);
+
+  comboboxentry14 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (comboboxentry14);
+  gtk_fixed_put (GTK_FIXED (fixed32), comboboxentry14, 184, 168);
+  gtk_widget_set_size_request (comboboxentry14, 189, 29);
+
+  identifiant = gtk_label_new (_("identifiant"));
+  gtk_widget_show (identifiant);
+  gtk_fixed_put (GTK_FIXED (fixed32), identifiant, 0, 96);
+  gtk_widget_set_size_request (identifiant, 192, 40);
+
+  municipalite = gtk_label_new (_("municipalite"));
+  gtk_widget_show (municipalite);
+  gtk_fixed_put (GTK_FIXED (fixed32), municipalite, 0, 152);
+  gtk_widget_set_size_request (municipalite, 192, 56);
+
+  buttonsouhailaff = gtk_button_new ();
+  gtk_widget_show (buttonsouhailaff);
+  gtk_fixed_put (GTK_FIXED (fixed32), buttonsouhailaff, 368, 240);
+  gtk_widget_set_size_request (buttonsouhailaff, 160, 40);
+
+  alignment65 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment65);
+  gtk_container_add (GTK_CONTAINER (buttonsouhailaff), alignment65);
+
+  hbox67 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox67);
+  gtk_container_add (GTK_CONTAINER (alignment65), hbox67);
+
+  image101 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image101);
+  gtk_box_pack_start (GTK_BOX (hbox67), image101, FALSE, FALSE, 0);
+
+  label283 = gtk_label_new_with_mnemonic (_("chercher"));
+  gtk_widget_show (label283);
+  gtk_box_pack_start (GTK_BOX (hbox67), label283, FALSE, FALSE, 0);
 
   button27 = gtk_button_new ();
   gtk_widget_show (button27);
@@ -1936,51 +1952,9 @@ create_Gestion_utilisateurs (void)
   gtk_widget_show (label116);
   gtk_box_pack_start (GTK_BOX (hbox31), label116, FALSE, FALSE, 0);
 
-  entry69 = gtk_entry_new ();
-  gtk_widget_show (entry69);
-  gtk_fixed_put (GTK_FIXED (fixed32), entry69, 192, 104);
-  gtk_widget_set_size_request (entry69, 160, 27);
-  gtk_entry_set_invisible_char (GTK_ENTRY (entry69), 8226);
-
-  comboboxentry14 = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (comboboxentry14);
-  gtk_fixed_put (GTK_FIXED (fixed32), comboboxentry14, 184, 168);
-  gtk_widget_set_size_request (comboboxentry14, 189, 29);
-
-  button61 = gtk_button_new ();
-  gtk_widget_show (button61);
-  gtk_fixed_put (GTK_FIXED (fixed32), button61, 368, 240);
-  gtk_widget_set_size_request (button61, 160, 40);
-
-  alignment65 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment65);
-  gtk_container_add (GTK_CONTAINER (button61), alignment65);
-
-  hbox67 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox67);
-  gtk_container_add (GTK_CONTAINER (alignment65), hbox67);
-
-  image101 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image101);
-  gtk_box_pack_start (GTK_BOX (hbox67), image101, FALSE, FALSE, 0);
-
-  label283 = gtk_label_new_with_mnemonic (_("chercher"));
-  gtk_widget_show (label283);
-  gtk_box_pack_start (GTK_BOX (hbox67), label283, FALSE, FALSE, 0);
-
-  identifiant = gtk_label_new (_("identifiant"));
-  gtk_widget_show (identifiant);
-  gtk_fixed_put (GTK_FIXED (fixed32), identifiant, 0, 96);
-  gtk_widget_set_size_request (identifiant, 192, 40);
-
-  municipalite = gtk_label_new (_("municipalite"));
-  gtk_widget_show (municipalite);
-  gtk_fixed_put (GTK_FIXED (fixed32), municipalite, 0, 152);
-  gtk_widget_set_size_request (municipalite, 192, 56);
-
-  Afficher = gtk_label_new (_("Afficher"));
-  gtk_widget_show (Afficher);
-  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 3), Afficher);
+  Affichersouhail = gtk_label_new (_("Afficher"));
+  gtk_widget_show (Affichersouhail);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook6), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook6), 3), Affichersouhail);
 
   __lection_ = gtk_label_new (_("\303\211lection "));
   gtk_widget_show (__lection_);
@@ -2129,6 +2103,21 @@ create_Gestion_utilisateurs (void)
   g_signal_connect ((gpointer) button55, "clicked",
                     G_CALLBACK (on_Valider_clicked),
                     NULL);
+  g_signal_connect ((gpointer) buttonsouhailaj, "clicked",
+                    G_CALLBACK (on_buttonsouhailaj_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttonsouhailmod, "clicked",
+                    G_CALLBACK (on_buttonsouhailmod_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttonsouhailsup, "clicked",
+                    G_CALLBACK (on_buttonsouhailsup_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttonsouhailaff, "clicked",
+                    G_CALLBACK (on_buttonsouhailaff_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button27, "clicked",
+                    G_CALLBACK (on_button27_clicked),
+                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (Gestion_utilisateurs, Gestion_utilisateurs, "Gestion_utilisateurs");
@@ -2229,22 +2218,12 @@ create_Gestion_utilisateurs (void)
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Utilisateur_, "Utilisateur_");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, notebook6, "notebook6");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed___lection, "fixed___lection");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, jour, "jour");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, mois, "mois");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, annee, "annee");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry17, "entry17");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry18, "entry18");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, joursou, "joursou");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, moissou, "moissou");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, anneesou, "anneesou");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailaj, "entrysouhailaj");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailaj1, "entrysouhailaj1");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Erreur_election, "Erreur_election");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button20, "button20");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment22, "alignment22");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox24, "hbox24");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image34, "image34");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label103, "label103");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button21, "button21");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment23, "alignment23");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox25, "hbox25");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image35, "image35");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label104, "label104");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobutton19, "radiobutton19");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobutton18, "radiobutton18");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
@@ -2254,59 +2233,64 @@ create_Gestion_utilisateurs (void)
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, municipalit__, "municipalit__");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, DateE, "DateE");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, combobox1, "combobox1");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, buttonsouhailaj, "buttonsouhailaj");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment23, "alignment23");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox25, "hbox25");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image35, "image35");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label104, "label104");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label281, "label281");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Ajouter, "Ajouter");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Ajoutersouhail, "Ajoutersouhail");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed29, "fixed29");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed30, "fixed30");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry33, "entry33");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailmod, "entrysouhailmod");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button22, "button22");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment24, "alignment24");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox26, "hbox26");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image36, "image36");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label106, "label106");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobutton26, "radiobutton26");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobutton27, "radiobutton27");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobutton25, "radiobutton25");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry34, "entry34");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, comboboxentry7, "comboboxentry7");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button23, "button23");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment25, "alignment25");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox27, "hbox27");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image37, "image37");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label110, "label110");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailmod, "entrysouhailmod");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, nb_habitants, "nb_habitants");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, nb_conseillers, "nb_conseillers");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, municipalite, "municipalite");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Modifier, "Modifier");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobuttonmod, "radiobuttonmod");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobuttonmod, "radiobuttonmod");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, radiobuttonmod, "radiobuttonmod");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, comboboxentry7, "comboboxentry7");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, buttonsouhailmod, "buttonsouhailmod");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment25, "alignment25");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox27, "hbox27");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image37, "image37");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label110, "label110");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Modifiersouhail, "Modifiersouhail");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed31, "fixed31");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, treeview3, "treeview3");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry70, "entry70");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button26, "button26");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailsup, "entrysouhailsup");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, checkbutton29, "checkbutton29");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, buttonsouhailsup, "buttonsouhailsup");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment28, "alignment28");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox30, "hbox30");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image40, "image40");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label115, "label115");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, checkbutton29, "checkbutton29");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Supprimer, "Supprimer");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Supprimersouhail, "Supprimersouhail");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed32, "fixed32");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, treeview4, "treeview4");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entrysouhailaff, "entrysouhailaff");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, comboboxentry14, "comboboxentry14");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, municipalite, "municipalite");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, buttonsouhailaff, "buttonsouhailaff");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment65, "alignment65");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox67, "hbox67");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image101, "image101");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label283, "label283");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button27, "button27");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment29, "alignment29");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox31, "hbox31");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image41, "image41");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label116, "label116");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, entry69, "entry69");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, comboboxentry14, "comboboxentry14");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, button61, "button61");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, alignment65, "alignment65");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, hbox67, "hbox67");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, image101, "image101");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, label283, "label283");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, identifiant, "identifiant");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, municipalite, "municipalite");
-  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Afficher, "Afficher");
+  GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, Affichersouhail, "Affichersouhail");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, __lection_, "__lection_");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, table1, "table1");
   GLADE_HOOKUP_OBJECT (Gestion_utilisateurs, fixed5, "fixed5");
@@ -2362,13 +2346,13 @@ create_Gestion_du_BV (void)
   GtkWidget *bv_a_label_municipalite;
   GtkWidget *bv_a_radiobutton_salle3;
   GSList *bv_a_radiobutton_salle3_group = NULL;
-  GtkWidget *bv_a_label_identifiant;
   GtkWidget *bv_a_label_capacite_electeurs;
   GtkWidget *bv_a_label_capacite_observateurs;
   GtkWidget *bv_a_radiobutton_salle1;
   GSList *bv_a_radiobutton_salle1_group = NULL;
   GtkWidget *bv_a_radiobutton_salle2;
   GtkWidget *bv_a_comboboxentry_municipalite;
+  GtkWidget *bv_a_label_identifiant;
   GtkWidget *bv_ajouter;
   GtkWidget *fixed54;
   GtkWidget *bv_modifier_image;
@@ -2522,12 +2506,6 @@ create_Gestion_du_BV (void)
   gtk_radio_button_set_group (GTK_RADIO_BUTTON (bv_a_radiobutton_salle3), bv_a_radiobutton_salle3_group);
   bv_a_radiobutton_salle3_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (bv_a_radiobutton_salle3));
 
-  bv_a_label_identifiant = gtk_label_new (_("<span foreground=\"black\" ><b>Identifiant</b></span>"));
-  gtk_widget_show (bv_a_label_identifiant);
-  gtk_fixed_put (GTK_FIXED (fixed53), bv_a_label_identifiant, 340, 50);
-  gtk_widget_set_size_request (bv_a_label_identifiant, 160, 40);
-  gtk_label_set_use_markup (GTK_LABEL (bv_a_label_identifiant), TRUE);
-
   bv_a_label_capacite_electeurs = gtk_label_new (_("<span foreground=\"black\" ><b>Capacite electeurs</b></span>"));
   gtk_widget_show (bv_a_label_capacite_electeurs);
   gtk_fixed_put (GTK_FIXED (fixed53), bv_a_label_capacite_electeurs, 340, 105);
@@ -2558,6 +2536,12 @@ create_Gestion_du_BV (void)
   gtk_widget_show (bv_a_comboboxentry_municipalite);
   gtk_fixed_put (GTK_FIXED (fixed53), bv_a_comboboxentry_municipalite, 580, 230);
   gtk_widget_set_size_request (bv_a_comboboxentry_municipalite, 190, 30);
+
+  bv_a_label_identifiant = gtk_label_new (_("<span foreground=\"black\" ><b>Identifiant</b></span>"));
+  gtk_widget_show (bv_a_label_identifiant);
+  gtk_fixed_put (GTK_FIXED (fixed53), bv_a_label_identifiant, 340, 50);
+  gtk_widget_set_size_request (bv_a_label_identifiant, 160, 40);
+  gtk_label_set_use_markup (GTK_LABEL (bv_a_label_identifiant), TRUE);
 
   bv_ajouter = gtk_label_new (_("Ajouter"));
   gtk_widget_show (bv_ajouter);
@@ -2857,12 +2841,12 @@ create_Gestion_du_BV (void)
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, label258, "label258");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_label_municipalite, "bv_a_label_municipalite");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_radiobutton_salle3, "bv_a_radiobutton_salle3");
-  GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_label_identifiant, "bv_a_label_identifiant");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_label_capacite_electeurs, "bv_a_label_capacite_electeurs");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_label_capacite_observateurs, "bv_a_label_capacite_observateurs");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_radiobutton_salle1, "bv_a_radiobutton_salle1");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_radiobutton_salle2, "bv_a_radiobutton_salle2");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_comboboxentry_municipalite, "bv_a_comboboxentry_municipalite");
+  GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_a_label_identifiant, "bv_a_label_identifiant");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_ajouter, "bv_ajouter");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, fixed54, "fixed54");
   GLADE_HOOKUP_OBJECT (Gestion_du_BV, bv_modifier_image, "bv_modifier_image");

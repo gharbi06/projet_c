@@ -72,3 +72,43 @@ on_button6_clicked                     (GtkButton       *button,
 
 }
 
+
+void
+on_buttonsouhailaj_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_buttonsouhailmod_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_buttonsouhailsup_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_buttonsouhailaff_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_button27_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
