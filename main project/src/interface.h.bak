@@ -8,3 +8,4 @@ GtkWidget* create_Gestion_observateurs (void);
 GtkWidget* create_Gestion_utilisateurs (void);
 GtkWidget* create_Gestion_du_BV (void);
 GtkWidget* create_vote (void);
+GtkWidget* create_window1 (void);
