@@ -4,7 +4,7 @@ int mois;
 int anne ;
 }Date;
 typedef struct
-{char nat[20];
+{int nat;
 char cin[10];
 char nom[30];
 char prenom[30]; 
@@ -26,3 +26,5 @@ utilisateur chercher(char id[],char nom[],char prenom[] ,char * user);
 int modif_vote ( char  idvote[] , char *user);
 void TPHF(char * user, float * fe,float * h);
 float TPE(char * user);
+int nombre_de_vote_blanc(char * user);
+float age_moyen(char * user);

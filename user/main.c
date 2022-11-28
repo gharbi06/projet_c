@@ -7,7 +7,19 @@ int main ()
   float x;
 float y;
   float T;
-     T=TPE("user.txt");
+// le taux de vote blanc
+int h;
+    
+    h=nombre_de_vote_blanc("user.txt");
+    printf("\ntaux du vote blanc est %d",h);
+
+//l'age moyen des elections participants
+float g;
+    
+    g=age_moyen("user.txt");
+    printf("\nl'age moyen des elections participants est %f",g);
+
+     /*T=TPE("user.txt");
      printf("\n le taux de participation de electeur est egale a %f ",T);
 
 
@@ -21,7 +33,7 @@ utilisateur u2={"tunis","2","hajer","bounjour","haje@gmail.com",2,"2",1,"15",05,
  if(z==1)
         printf("\najout de point avec succés");
     else printf("\nechec ajout");
-  /*    
+    
    x=modifier("1",u2,"user.txt");
 
     if(x==1)
